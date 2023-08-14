@@ -1,4 +1,4 @@
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Route, HashRouter, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Home from './pages/Home';
 import Starred from './pages/Starred';
@@ -11,7 +11,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <GlobalTheme>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route element={<MainLayout />}>
               <Route path="/" element={<Home />} />
@@ -20,7 +20,7 @@ function App() {
             <Route path="/show/:showId" element={<Show />} />
             <Route path="*" element={<div>PAGE NOT FOUND</div>} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </GlobalTheme>
     </QueryClientProvider>
   );
