@@ -22,7 +22,7 @@ const TitleWrapper = styled.div`
     margin: 0 0 10px;
   }
   p {
-    color: ${({ theme }) => theme.mainColors.dark};
+    color: ${({ theme }) => theme.mainColors.red};
     margin: 0;
   }
 `;
